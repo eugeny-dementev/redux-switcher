@@ -2,6 +2,9 @@
   "name": "redux-switcher",
   "version": "0.0.1",
   "description": "Switcher for redux store reducers",
+  "engines": {
+    "node": ">=5.0.0"
+  },
   "main": "src/index.js",
   "scripts": {
     "eslint": "eslint src",
