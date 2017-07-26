@@ -2,9 +2,12 @@
   "name": "redux-switcher",
   "version": "0.0.1",
   "description": "Switcher for redux store reducers",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint src",
+    "eslint-fix": "eslint src --fix",
+    "test": "lab -T node_modules/babel-lab test/**/*.js -l",
+    "codecov": "lab -T node_modules/babel-lab -r lcov | codecov"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/eugeny-dementev/redux-switcher/issues"
   },
-  "homepage": "https://github.com/eugeny-dementev/redux-switcher#readme"
+  "homepage": "https://github.com/eugeny-dementev/redux-switcher#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-lab": "^2.0.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "lab": "^14.1.1"
+  }
 }
