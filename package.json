@@ -1,0 +1,26 @@
+{
+  "name": "redux-switcher",
+  "version": "0.0.1",
+  "description": "Switcher for redux store reducers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeny-dementev/redux-switcher.git"
+  },
+  "keywords": [
+    "redux",
+    "switch",
+    "switcher",
+    "reducer",
+    "store"
+  ],
+  "author": "Eugeny Dementev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugeny-dementev/redux-switcher/issues"
+  },
+  "homepage": "https://github.com/eugeny-dementev/redux-switcher#readme"
+}
