@@ -8,7 +8,7 @@ const createReducerSwitcher = require('../../src/index');
 
 experiment('createReducerSwitcher', () => {
   test('should return object with to functions { reducer, switch }', (done) => {
-    const reducerSwitcher = createReducerSwitcher();
+    const reducerSwitcher = createReducerSwitcher({ one: () => {} });
 
     assert.equal('object', typeof reducerSwitcher);
     assert.equal('function', typeof reducerSwitcher.reducer);
@@ -17,11 +17,27 @@ experiment('createReducerSwitcher', () => {
     done();
   });
 
-  test('should throw error in default reducer', (done) => {
-    const reducerSwitcher = createReducerSwitcher();
+  test('should throw error if no reducer passed', (done) => {
+    assert.throws(() => {
+      createReducerSwitcher();
+    }, Error);
+
+    done();
+  });
+
+  test('should throw error if first reducer is not a function', (done) => {
+    assert.throws(() => {
+      createReducerSwitcher({ reducer: 'value' });
+    }, Error);
+
+    done();
+  });
+
+  test('should throw error if switch reducer to not a function', (done) => {
+    const reducerSwitcher = createReducerSwitcher({ one: () => {} });
 
     assert.throws(() => {
-      reducerSwitcher.reducer();
+      reducerSwitcher.switch('two');
     }, Error);
 
     done();

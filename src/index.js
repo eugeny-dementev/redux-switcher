@@ -1,5 +1,17 @@
 module.exports = function createReducerSwitcher (reducers = {}) {
-  let currentReducer = defaultReducer;
+  const reducerNames = Object.keys(reducers);
+
+  if (reducerNames.length == 0) {
+    throw new Error('No reducers passed');
+  }
+
+  const firstReducer = reducers[reducerNames[0]];
+
+  if (typeof firstReducer !== 'function') {
+    throw Error(`${reducerNames[0]} reducer is not a function`);
+  }
+
+  let currentReducer = firstReducer;
   return {
     reducer: (...args) => currentReducer(...args),
     switch: (name) => {
@@ -11,7 +23,3 @@ module.exports = function createReducerSwitcher (reducers = {}) {
     },
   };
 };
-
-function defaultReducer () {
-  throw new Error('ReducerSwitcher: This is a stub. Switch to one of passed reducers before dispatch actions');
-}
