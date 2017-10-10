@@ -9,8 +9,8 @@
   "scripts": {
     "eslint": "eslint src",
     "eslint-fix": "eslint src --fix",
-    "test": "lab -T node_modules/babel-lab test/**/*.js -l",
-    "codecov": "lab -T node_modules/babel-lab -r lcov | codecov"
+    "test": "lab  test/**/*.js",
+    "codecov": "lab -r lcov | codecov"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,6 @@
   },
   "homepage": "https://github.com/eugeny-dementev/redux-switcher#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-lab": "^2.0.0",
-    "babel-preset-env": "^1.6.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
