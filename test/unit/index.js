@@ -21,7 +21,7 @@ experiment('createReducerSwitcher', () => {
     const reducerSwitcher = createReducerSwitcher();
 
     assert.throws(() => {
-      reducerSwitcher();
+      reducerSwitcher.reducer();
     }, Error);
 
     done();
