@@ -1,6 +1,6 @@
 {
   "name": "redux-switcher",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Switcher for redux store reducers",
   "engines": {
     "node": ">=6.0.0"
