@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Switcher for redux store reducers",
   "engines": {
-    "node": ">=5.0.0"
+    "node": ">=6.0.0"
   },
   "main": "src/index.js",
   "scripts": {
